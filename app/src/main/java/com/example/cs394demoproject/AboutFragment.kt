@@ -1,4 +1,4 @@
-package com.example.newsapp_cs394_2
+package com.example.cs394demoproject
 
 import android.os.Bundle
 import android.view.LayoutInflater

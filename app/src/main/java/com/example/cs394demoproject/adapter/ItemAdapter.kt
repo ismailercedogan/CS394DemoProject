@@ -20,6 +20,13 @@ class ItemAdapter (private val dataset: List <News>): RecyclerView.Adapter<ItemA
         val img = view.findViewById<ImageView>(R.id.img_headline)
         lateinit var news: News
 
+        init{
+            view.setOnClickListener{
+                view.findNavController()
+                    .navigate(ListOfNewsFragmentDirections.actionListOfNewsFragmentToNewsDetailsFragment2(news))
+            }
+        }
+
         fun bind(news:News){
             this.news =news
             titleView.text = news.title

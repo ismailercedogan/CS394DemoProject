@@ -2,6 +2,7 @@
     <string name="app_name">CS394DemoProject</string>
     <string name="home">Home</string>
     <string name="about">About</string>
+    <string name="about_app">About This App</string>
     <string-array name="title_array">
         <item>News1</item>
         <item>News2</item>

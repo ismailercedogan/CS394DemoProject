@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable name="vm"
+            type="com.example.cs394demoproject.newslist.NewsListViewModel"/>
     </data>
 
     <FrameLayout
@@ -17,6 +18,7 @@
             android:layout_width="match_parent"
             android:id="@+id/recyclerView"
             android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:listData="@{vm.news}"/>
     </FrameLayout>
 </layout>

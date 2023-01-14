@@ -18,23 +18,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val navController by lazy {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navHostFragment.navController
     }
     private val appBarConfiguration by lazy {
         AppBarConfiguration(setOf(R.id.listOfNewsFragment, R.id.aboutFragment), drawerLayout)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setupDrawerLayout()
+
     }
 
-    fun setupDrawerLayout(){
-        val navView:NavigationView = findViewById(R.id.nav_view)
-        setupActionBarWithNavController(navController,appBarConfiguration)
+    fun setupDrawerLayout() {
+        val navView: NavigationView = findViewById(R.id.nav_view)
+        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }

@@ -5,23 +5,24 @@
     android:id="@+id/navigation"
     app:startDestination="@id/listOfNewsFragment">
 
+
     <fragment
         android:id="@+id/listOfNewsFragment"
-        android:name="com.example.cs394demoproject.ListOfNewsFragment"
+        android:name="com.example.cs394demoproject.newslist.ListOfNewsFragment"
         android:label="ListOfNewsFragment"
         tools:layout="@layout/list_of_news_layout">
-    <action
-        android:id="@+id/action_listOfNewsFragment_to_newsDetailsFragment2"
-        app:destination="@id/newsDetailsFragment" />
+        <action
+            android:id="@+id/action_listOfNewsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsDetailsFragment"
-        android:name="com.example.cs394demoproject.NewsDetailsFragment"
+        android:name="com.example.cs394demoproject.newsdetails.NewsDetailsFragment"
         android:label="NewsDetailsFragment"
         tools:layout="@layout/newsdetails_layout">
         <argument
             android:name="news"
-            app:argType="com.example.cs394demoproject.model.News" />
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"

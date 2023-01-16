@@ -1,4 +1,4 @@
-package com.example.cs394demoproject.fragments.newslist
+package com.example.cs394demoproject.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cs394demoproject.R
 import com.example.cs394demoproject.model.News
+import com.example.mvvm_livedata_room.bindImage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_layout.view.*
 
@@ -42,7 +43,8 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.NewsViewHolder>() {
 
 
         holder.itemView.apply {
-            Picasso.get().load(news.urlToImage).into(img_headline);
+          //  Picasso.get().load(news.urlToImage).into(img_headline);
+            bindImage(img_headline, news.urlToImage)
             text_source.text = news.source?.name
             text_title.text = news.title
 

@@ -2,7 +2,6 @@ package com.example.cs394demoproject.fragments.savednews
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.cs394demoproject.fragments.newslist.NewsListViewModel
 import com.example.cs394demoproject.MainActivity
 import com.example.cs394demoproject.R
-import com.example.cs394demoproject.fragments.newslist.ItemAdapter
+import com.example.cs394demoproject.adapter.ItemAdapter
 import com.google.android.material.snackbar.Snackbar
 
 class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {

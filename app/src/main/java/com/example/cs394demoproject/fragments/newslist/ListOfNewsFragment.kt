@@ -5,8 +5,6 @@ import android.util.Log
 import android.view.View
 import android.widget.AbsListView
 import android.widget.ProgressBar
-import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -17,7 +15,7 @@ import com.example.cs394demoproject.util.Constants
 import com.example.cs394demoproject.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.cs394demoproject.util.Resource
 import com.example.cs394demoproject.R
-import com.example.cs394demoproject.databinding.ListOfNewsLayoutBinding
+import com.example.cs394demoproject.adapter.ItemAdapter
 
 class ListOfNewsFragment : Fragment(R.layout.list_of_news_layout) {
     lateinit var viewModel: NewsListViewModel

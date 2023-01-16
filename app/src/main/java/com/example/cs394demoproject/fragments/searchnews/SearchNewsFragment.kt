@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.cs394demoproject.fragments.newslist.NewsListViewModel
 import com.example.cs394demoproject.MainActivity
 import com.example.cs394demoproject.R
-import com.example.cs394demoproject.fragments.newslist.ItemAdapter
+import com.example.cs394demoproject.adapter.ItemAdapter
 import com.example.cs394demoproject.util.Constants
 import com.example.cs394demoproject.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
 import com.example.cs394demoproject.util.Resource

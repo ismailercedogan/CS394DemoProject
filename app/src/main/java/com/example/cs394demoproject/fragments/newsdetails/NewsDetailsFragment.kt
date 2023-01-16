@@ -12,6 +12,7 @@ import com.example.cs394demoproject.MainActivity
 import com.example.cs394demoproject.R
 import com.example.cs394demoproject.databinding.NewsdetailsLayoutBinding
 import com.example.cs394demoproject.fragments.newslist.NewsListViewModel
+import com.example.mvvm_livedata_room.bindImage
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_layout.view.*
@@ -40,8 +41,8 @@ class NewsDetailsFragment : Fragment(R.layout.newsdetails_layout) {
         binding.textAuthor.text = selectedNews.author
         binding.textNewsDetail.text = selectedNews.description
         binding.textNewsTitle.text = selectedNews.title
-        Picasso.get().load(selectedNews.urlToImage).into(binding.imgNews);
-
+        //Picasso.get().load(selectedNews.urlToImage).into(binding.imgNews);
+        bindImage(binding.imgNews, selectedNews.urlToImage)
         return binding.root
     }
 }

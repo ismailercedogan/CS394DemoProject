@@ -1,4 +1,4 @@
-package com.example.cs394demoproject
+package com.example.cs394demoproject.fragments.about
 
 import android.os.Bundle
 import android.view.LayoutInflater

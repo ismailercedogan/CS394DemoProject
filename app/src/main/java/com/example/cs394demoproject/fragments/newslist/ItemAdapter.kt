@@ -43,8 +43,8 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.NewsViewHolder>() {
 
         holder.itemView.apply {
             Picasso.get().load(news.urlToImage).into(img_headline);
-            sourceView.text = news.source?.name
-            titleView.text = news.title
+            text_source.text = news.source?.name
+            text_title.text = news.title
 
 
 

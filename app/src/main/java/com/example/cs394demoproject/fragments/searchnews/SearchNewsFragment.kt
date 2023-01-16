@@ -19,6 +19,7 @@ import com.example.cs394demoproject.adapter.ItemAdapter
 import com.example.cs394demoproject.util.Constants
 import com.example.cs394demoproject.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
 import com.example.cs394demoproject.util.Resource
+import kotlinx.android.synthetic.main.fragment_search_news.*
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
@@ -34,12 +35,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
-        view.findViewById<RecyclerView>(R.id.rvSearchNews).apply {
-            adapter = newsAdapter
-            layoutManager = LinearLayoutManager(activity)
-            addOnScrollListener(this@SearchNewsFragment.scrollListener)
-        }
-
+        setupRecyclerView()
         newsAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
                 putSerializable("news", it)
@@ -129,5 +125,12 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
             }
         }
     }
-
+    private fun setupRecyclerView() {
+        newsAdapter = ItemAdapter()
+        rvSearchNews.apply {
+            adapter = newsAdapter
+            layoutManager = LinearLayoutManager(activity)
+            addOnScrollListener(this@SearchNewsFragment.scrollListener)
+        }
+    }
 }

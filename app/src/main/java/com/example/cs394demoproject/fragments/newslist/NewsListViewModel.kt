@@ -25,7 +25,7 @@ class NewsListViewModel(
     var searchNewsResponse: ApiResponse? = null
 
     init {
-        getBreakingNews("us")
+        getBreakingNews("tr")
     }
 
     fun getBreakingNews(countryCode: String) = viewModelScope.launch {

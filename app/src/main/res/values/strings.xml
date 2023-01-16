@@ -1,44 +1,9 @@
 <resources>
-    <string name="api_key">151ea3479e53498eaa1e4ebf533de2cc</string>
-    <string name="app_name">CS394DemoProject</string>
+    <string name="app_name">FinalNews_CS394</string>
     <string name="home">Home</string>
     <string name="about">About</string>
     <string name="about_app">About This App</string>
-    <string-array name="title_array">
-
-        <item>News1</item>
-        <item>News2</item>
-        <item>News3</item>
-        <item>News4</item>
-        <item>News5</item>
-        <item>News6</item>
-        <item>News7</item>
-        <item>News8</item>
-        <item>News9</item>
-        <item>News10</item>
-    </string-array>
-    <string-array name="description_array">
-        <item>News1 description</item>
-        <item>News2 description</item>
-        <item>News3 description</item>
-        <item>News4 description</item>
-        <item>News5 description</item>
-        <item>News6 description</item>
-        <item>News7 description</item>
-        <item>News8 description</item>
-        <item>News9 description</item>
-        <item>News10 description</item>
-    </string-array>
-    <string-array name="source_array">
-        <item>News1 description</item>
-        <item>News2 description</item>
-        <item>News3 description</item>
-        <item>News4 description</item>
-        <item>News5 description</item>
-        <item>News6 description</item>
-        <item>News7 description</item>
-        <item>News8 description</item>
-        <item>News9 description</item>
-        <item>News10 description</item>
-        </string-array>
+    <string name="default_article_title">article</string>
+    <string name="default_source_title">source</string>
+    <string name="default_details_title">details</string>
 </resources>

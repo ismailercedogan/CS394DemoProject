@@ -45,7 +45,7 @@
         android:name="com.example.cs394demoproject.fragments.newsdetails.NewsDetailsFragment"
         android:label="ArticleFragment" >
         <argument
-            android:name="article"
+            android:name="news"
             app:argType="com.example.cs394demoproject.model.News" />
     </fragment>
 </navigation>

@@ -86,6 +86,7 @@ class NewsListViewModel(
     }
 }
 
+@Suppress("UNCHECKED_CAST")
 class NewsViewModelProviderFactory(val newsRepository: NewsHeadlinesRepo) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebViewClient
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
 import com.example.cs394demoproject.fragments.newslist.NewsListViewModel
 import com.example.cs394demoproject.MainActivity
 import com.example.cs394demoproject.R
 import com.example.cs394demoproject.databinding.NewsdetailsLayoutBinding
-import com.google.android.material.snackbar.Snackbar
+import com.squareup.picasso.Picasso
 
-
-class ArticleFragment : Fragment(R.layout.newsdetails_layout) {
+class NewsDetailsFragment : Fragment(R.layout.newsdetails_layout) {
 
     lateinit var viewModel: NewsListViewModel
     val args: ArticleFragmentArgs by navArgs()
@@ -36,7 +33,7 @@ class ArticleFragment : Fragment(R.layout.newsdetails_layout) {
         binding.textSource.text = selectedNews.title
         binding.textNewsDetail.text = selectedNews.description
         binding.textNewsTitle.text = selectedNews.title
-        Glide.with(this).load(selectedNews.urlToImage).into(binding.imgNews)
+        Picasso.get().load(selectedNews.urlToImage).into(binding.imgNews);
 
         return binding.root
     }

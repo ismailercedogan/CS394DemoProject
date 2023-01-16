@@ -3,14 +3,13 @@ package com.example.cs394demoproject.fragments.newslist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.cs394demoproject.R
 import com.example.cs394demoproject.model.News
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.item_layout.view.*
 
 class ItemAdapter : RecyclerView.Adapter<ItemAdapter.NewsViewHolder>() {
 
@@ -41,14 +40,12 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.NewsViewHolder>() {
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val news = differ.currentList[position]
 
-        val titleView = holder.itemView.findViewById<TextView>(R.id.titleView)
-        val sourceView = holder.itemView.findViewById<TextView>(R.id.sourceView)
-        val img = holder.itemView.findViewById<ImageView>(R.id.img_headline)
 
         holder.itemView.apply {
-            Glide.with(this).load(news.urlToImage).into(img)
+            Picasso.get().load(news.urlToImage).into(img_headline);
             sourceView.text = news.source?.name
             titleView.text = news.title
+
 
 
             setOnClickListener {

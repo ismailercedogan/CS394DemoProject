@@ -6,7 +6,8 @@ import com.example.cs394demoproject.model.News
 
 @Database(
         entities = [News::class],
-        version = 1
+        version = 1,
+    exportSchema = false
 )
 @TypeConverters(Convertors::class)
 abstract class NewsHeadlinesDB : RoomDatabase() {

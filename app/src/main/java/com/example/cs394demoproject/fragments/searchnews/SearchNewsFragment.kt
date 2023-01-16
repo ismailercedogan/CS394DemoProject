@@ -47,7 +47,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
         }
 
         var job: Job? = null
-        view.findViewById<EditText>(R.id.etSearch).addTextChangedListener { editable ->
+        etSearch.addTextChangedListener { editable ->
             job?.cancel()
             job = MainScope().launch {
                 delay(SEARCH_NEWS_TIME_DELAY)
@@ -85,12 +85,12 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
         })
     }
     private fun hideProgressBar() {
-        view?.findViewById<ProgressBar>(R.id.paginationProgressBar)?.visibility = View.INVISIBLE
+        paginationProgressBar.visibility = View.INVISIBLE
         isLoading = false
     }
 
     private fun showProgressBar() {
-        view?.findViewById<ProgressBar>(R.id.paginationProgressBar)?.visibility = View.VISIBLE
+        paginationProgressBar.visibility = View.VISIBLE
         isLoading = true
     }
 

@@ -23,7 +23,7 @@ interface ApiService {
             apiKey: String = API_KEY
     ): Response<ApiResponse>
 
-    @GET("v2/everything")
+    @GET("v2/top-headlines")
     suspend fun searchForNews(
             @Query("q")
             searchQuery: String,

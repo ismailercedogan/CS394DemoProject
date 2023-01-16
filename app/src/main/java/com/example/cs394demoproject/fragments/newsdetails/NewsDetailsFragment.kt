@@ -28,7 +28,7 @@ class NewsDetailsFragment : Fragment(R.layout.newsdetails_layout) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        viewModel = (activity as MainActivity).viewModel
         val binding = DataBindingUtil.inflate<NewsdetailsLayoutBinding>(
             inflater,
             R.layout.newsdetails_layout,
@@ -37,13 +37,18 @@ class NewsDetailsFragment : Fragment(R.layout.newsdetails_layout) {
         )
         val args = NewsDetailsFragmentArgs.fromBundle(requireArguments())
         val selectedNews = args.news
+        val view = inflater.inflate(R.layout.newsdetails_layout, container, false)
 
         binding.textAuthor.text = selectedNews.author
         binding.textNewsDetail.text = selectedNews.description
         binding.textNewsTitle.text = selectedNews.title
         //Picasso.get().load(selectedNews.urlToImage).into(binding.imgNews);
         bindImage(binding.imgNews, selectedNews.urlToImage)
+
+
+
         return binding.root
+
     }
 }
 

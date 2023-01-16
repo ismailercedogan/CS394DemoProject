@@ -26,7 +26,8 @@ abstract class NewsHeadlinesDB : RoomDatabase() {
                 Room.databaseBuilder(
                         context.applicationContext,
                         NewsHeadlinesDB::class.java,
-                        "news.db"
+                    "article_db.db"
                 ).build()
     }
 }
+
